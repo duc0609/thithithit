@@ -1,0 +1,47 @@
+
+        <div class="container">
+            <div class="row">
+              <div class="col-12 col-md-7 col-lg-8 mx-auto">
+                <div class="card card-signin my-5">
+                  <div class="card-body">
+                    <h5 class="card-title text-center font-weight-bold">Cập Nhật Hồ Sơ</h5>
+                    <form action="">
+                        <div class="row">
+                            <div class="col-6">
+                                <label for="exampleFormControlInput1" class="form-label fw-bold">Tên tài khoản</label>
+                                <input type="text" class="form-control" id="exampleFormControlInput1" ng-model="username" disabled>
+                            </div>
+                            <div class="col-6">
+                                <label for="exampleFormControlInput2" class="form-label fw-bold">Họ và tên</label>
+                                <input type="text" class="form-control" id="exampleFormControlInput2" ng-model="fullname">
+                            </div>
+                        </div>
+                        <div class="row mt-2">
+                            <div class="col-6">
+                                <label for="pc" class="form-label fw-bold">Giới tính</label>{{tl.TenKD=="" ? "Chưa có" : tl.TenKD}}
+                                <input type="text" class="form-control" id="pc" ng-model="gender">
+                            </div>
+                            <div class="col-6">
+                                <label for="luong" class="form-label fw-bold">Ngày Sinh</label>
+                                <input type="text" class="form-control" id="luong" ng-model="birthday">
+                            </div>
+                        </div>
+                        <div class="row mt-2">
+                            <div class="col-6">
+                                <label for="thuong" class="form-label fw-bold">Học Phí</label>
+                                <input type="text" class="form-control" id="thuong" ng-model="schoolfee" >
+                            </div>
+                            <div class="col-6">
+                                <label for="clb" class="form-label fw-bold">Điểm</label>
+                                <input type="text" class="form-control" id="clb" ng-model="marks">
+                            </div>
+                        </div>
+                        <div class="d-grid mt-3">
+                            <button class="btn btn-lg btn-dark btn-block text-uppercase" ng-click="editInfo()" type="submit">cập nhật</button>
+                          </div>
+                    </form>
+                  </div>
+                </div>
+              </div>
+            </div>
+          </div>

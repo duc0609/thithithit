@@ -1,0 +1,56 @@
+header{
+  position: relative;
+}
+
+main{
+  min-height: 300px; background-color: transparent;
+}
+.row > article{
+  min-height: 300px; background-color: transparent;
+}
+.row> aside {
+  min-height: 300px; background-color: transparent;
+}
+.online-course{
+  position: absolute;
+  bottom: 20px; left: 10px;
+  font-variant: small-caps;
+}
+.online-course>h1{
+  font-family: Impact;
+  font-size: 50px;
+  color: white;
+  letter-spacing: 0.3px;
+  text-shadow: 2px 2px 2px black;
+  border-bottom: 1px dotted grey;
+  padding-bottom: 0;
+  margin: 0;
+}
+.online-course>h5{
+  margin-top: 5px;
+  letter-spacing: 0.5px;
+}
+@media (max-width: 576px) {
+  .list-group>li{
+    font-size: smaller;
+  }
+  .card-header{
+    font-size: smaller;
+  }
+}
+ul.list-group :hover{
+  background: rgb(117, 179, 204);
+  font-weight: bolder;
+}
+nav a{
+  font-size: larger;
+}
+nav a:hover{
+  font-weight: bolder;
+}
+article>div>div>a{
+  text-decoration: none;
+}
+article>div>div>a:hover{
+  box-shadow: 0 0 5px 5px orangered;
+}

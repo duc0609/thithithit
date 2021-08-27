@@ -1,0 +1,36 @@
+        <article class="col-lg-9 col-md-8 col-12">
+            <h2 class="text-center">{{min}}:{{sec}}</h2>
+            <div class="card mt-2" ng-repeat="ch in questions|limitTo:1:start">
+                <div class="card-header ">
+                    <i class="fas fa-book "><h4>Câu Hỏi môn học</h4></i> 
+                   
+                </div>
+                <div class="card-body">
+                  <h5 class="card-title">{{ch.Text}}</h5>
+                  <div class="form-check" ng-repeat="ans in ch.Answers">
+                        <input type="radio" name="answer" value="{{ans.Id}}"> {{ans.Text}}
+                  </div>
+                </div>
+                <div class="card-footer text-muted">
+                  Điểm: {{ch.chamdiem}}/80
+                </div>
+              </div>
+            <div class="text-center pt-3">
+        <button class="prevtab btn btn-danger" ng-click="first()">Trang Đầu</button>
+        <button class="prevtab btn btn-danger" ng-click="truoc()"> Trang Trước</button>
+        <button class="nexttab btn btn-info" ng-click="tiep()">Trang Tiếp</button>
+        <button class="nexttab btn btn-info" ng-click="last()">Trang Cuối</button>
+            </div>
+        </article>
+        <aside class="col-lg-3 col-md-4 col-12">
+            <div class="card mt-1 ml-n2 mr-2 w-100">
+                <div class="card-header"><i class="fas fa-stream"> DANH MỤC MÔN HỌC</i></div>
+                <div class="card-body p-0">
+                    <ul class="list-group">
+                        <li class="list-group-item" ng-repeat="sub in cacmonhoc|orderBy:'Name'">
+                            <a  href="#!tracnghiem/{{sub.Id}}/{{sub.Name}}">{{sub.Name|uppercase}}</a>
+                        </li>   
+                        </ul>
+                </div>
+            </div>
+        </aside>

@@ -1,0 +1,29 @@
+<article class="col-lg-9 col-md-8 col-12">
+    <div class="row">
+        <div class="col-sm-6 text-center mt-2" ng-repeat="sub in cacmonhoc | orderBy:'Name' | limitTo: pageSize:batdau">
+            <a class="card" href="#!tracnghiem/{{sub.Id}}/{{sub.Name}}">
+                <div class="card-body">
+                    <img src="images/logos/{{sub.Id}}.jpg" class="card-img-top w-50 mt-2" alt="">
+                </div>
+                <div class="card-footer">
+                    {{sub.Name}}
+                </div>
+            </a>
+        </div>
+        <div class="text-center mt-4">
+              <button class="prevtab btn btn-danger" ng-click="trangdau()">Trang Đầu</button>
+              <button class="prevtab btn btn-danger" ng-click="prev()"> Trang Trước</button>
+              <button class="nexttab btn btn-info" ng-click="next()">Trang Tiếp</button>
+              <button class="nexttab btn btn-info" ng-click="trangcuoi()">Trang Cuối</button>
+    </div>
+</article>
+<aside class="col-lg-3 col-md-4 col-12">
+    <div class="card mt-1 ml-n2 mr-2 w-100">
+        <div class="card-header"><i class="fas fa-stream"> DANH MỤC MÔN HỌC</i></div>
+        <div class="card-body p-0">
+            <ul class="list-group">
+                <li class="list-group-item" ng-repeat="sub in cacmonhoc|orderBy:'Name'">{{sub.Name|uppercase}}</li>
+            </ul>
+        </div>
+    </div>
+</aside>

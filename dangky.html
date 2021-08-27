@@ -1,0 +1,78 @@
+        <div class="container">
+            <div class="row">
+              <div class="col-sm-9 col-md-7 col-lg-5 mx-auto">
+                <div class="card card-signin my-5">
+                  <div class="card-body">
+                    <h5 class="card-title text-center font-weight-bold">Đăng Ký</h5>
+                    <form class="form-signin">
+                      <div class="form-label-group">
+                        <input type="text" id="tk" class="form-control" ng-model="student.username" placeholder="Tên tài khoản" required autofocus>
+                        <label for="tk">Tên tài khoản</label>
+                      </div>
+                      <div class="form-label-group">
+                        <input type="password" id="inputPassword" class="form-control" ng-model="student.password" placeholder="Password" required>
+                        <label for="inputPassword">Mật khẩu</label>
+                      </div>
+                      <div class="form-label-group">
+                        <input type="password" id="inputPassword2" class="form-control" placeholder="Confirm Password" required>
+                        <label for="inputPassword2"> Nhập lại mật khẩu</label>
+                      </div>
+                      <div class="form-label-group">
+                        <input type="text" id="ht" class="form-control" ng-model="student.fullname" placeholder="Họ tên" required autofocus>
+                        <label for="ht">Họ và tên</label>
+                      </div>
+                      <div class="form-label-group">
+                        <input type="email" id="inputEmail" class="form-control" ng-model="student.email" placeholder="Email address" required >
+                        <label for="inputEmail">Địa chỉ email</label>
+                      </div>
+                      <div class="mb-3">
+                            <label class="form-label">&nbsp;Giới tính: &nbsp;</label>
+                            <div class="form-check form-check-inline">
+                                <input class="form-check-input" ng-model="student.gender" type="radio" name="inlineRadioOptions" id="inlineRadio1" value="Nam" >
+                                <label class="form-check-label" for="inlineRadio1">Nam</label>
+                            </div>
+                            <div class="form-check form-check-inline">
+                                <input class="form-check-input" ng-model="student.gender" type="radio" name="inlineRadioOptions" id="inlineRadio2" value="Nữ">
+                                <label class="form-check-label" for="inlineRadio2">Nữ</label>
+                            </div>
+                      </div>
+                      <div class="form-label-group">
+                        <input type="text" id="bd" class="form-control" ng-model="student.birthday" placeholder="Ngày sinh" required >
+                        <label for="bd">Ngày sinh</label>
+                      </div>
+                      <div class="form-label-group">
+                        <input type="text" id="hp" class="form-control" ng-model="student.schoolfee" placeholder="Học phí" required >
+                        <label for="hp">Học phí</label>
+                      </div>
+                      <div class="form-label-group">
+                        <input type="text" id="d" class="form-control" ng-model="student.marks" placeholder="Nhập điểm" required >
+                        <label for="d">Điểm</label>
+                      </div>
+                      <div class="d-grid">
+                        <button class="btn btn-lg btn-dark btn-block text-uppercase" type="submit" ng-click="signUp()">Đăng ký</button>
+                      </div>
+                      <hr class="my-4">
+                      <div class="d-grid gap-2">
+                        <button class="btn btn-lg btn-google btn-block text-uppercase" type="submit"><i class="fab fa-google mr-2"></i> Đăng ký bằng Google</button>
+                        <button class="btn btn-lg btn-facebook btn-block text-uppercase" type="submit"><i class="fab fa-facebook-f mr-2"></i> Đăng ký bằng Facebook</button>
+                      </div>                   
+                    </form>
+                  </div>
+                </div>
+              </div>
+            </div>
+          </div>
+
+<!-- <script src="db/Students.js"></script>
+<script>
+  var app = angular.module("myapp",[]);
+    app.controller("myUser",function($scope){
+        $scope.student = {};
+        $scope.index = -1;
+        $scope.signUp = function(){
+          listStudent.push(angular.copy($scope.student));
+          console.log(listStudent);
+        }
+    });
+    
+</script> -->

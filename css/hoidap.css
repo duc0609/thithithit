@@ -1,0 +1,10 @@
+
+.with-chevron[aria-expanded='true'] i {
+    display: block;
+    transform: rotate(180deg) !important;
+  }
+
+  body {
+    min-height: 100vh;
+    background: linear-gradient(to right, #94dadf, #3ca2c7);
+  }
